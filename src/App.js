@@ -19,7 +19,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: '首页',
+      selectedTab: '清单',
       hidden: false,
       fullScreen: false,
     };
