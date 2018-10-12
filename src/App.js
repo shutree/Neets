@@ -22,7 +22,7 @@ class App extends Component {
   constructor(props) {
       super(props);
       this.state = {
-        selectedTab: 'redTab',
+        selectedTab: '首页',
         hidden: false,
         fullScreen: false,
       };
@@ -54,13 +54,27 @@ class App extends Component {
                     height: '22px',
                     background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}/>
                   }
-                  selected={this.state.selectedTab === 'blueTab'}
-                  onPress={this.go.bind(this,item.path)}
+                  selected={this.state.selectedTab === item.title}
+                  selectedIcon={<div style={{
+                    width: '22px',
+                    height: '22px',
+                    background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
+                  />
+                  }
+                  onPress={()=>{
+                    this.setState({
+                      selectedTab:item.title
+                    })
+                    let {history} = this.props;
+                    history.push({pathname:item.path})
+                  }}
+
                   >
                   <Switch>
-                  {routes.map(({id,path,component,render,exact})=>(
+                    <Route path={item.path} component={item.component} />
+                  {/*routes.map(({id,path,component,render,exact})=>(
                     <Route key = {id} exact = {exact} path = {path} component = {component} render={render}/>
-                    ))}
+                    ))*/}
                   </Switch>
                   </TabBar.Item>
             })

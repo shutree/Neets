@@ -9,9 +9,12 @@ class Details extends Component{
   render(){
     return(
         <div>
+        12345
+        {/*
+
           <AppTitle/>
           <p>这是详情页</p>
-          <Drawer/>
+          <Drawer/>*/}
         </div>
     )
   }
