@@ -11,15 +11,15 @@ import AppDetails from './components/pages/Details';
 
 import { NavBar, Icon, TabBar } from 'antd-mobile';
 
-import axios from 'axios'
+import axios from 'axios';
 
-import './assets/css/common.css'
+import './assets/css/common.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'home',
+      selectedTab: '首页',
       hidden: false,
       fullScreen: false,
     };
@@ -30,35 +30,44 @@ class App extends Component {
 
     return (
       <div className="App">
-        <TabBar
+        <TabBar 
           tabBarPosition="bottom"
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
           barTintColor="yellow"
         >
-          {routes.map((item, index) => {
-            return (
-              <TabBar.Item
-                title={item.title}
-                key={item.id}
-                icon={<div style={{
-                  width: '22px',
-                  height: '22px',
-                  background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat'
-                }}/>}
-                selected={this.state.selectedTab === item.name}
-                onPress={() => {
-                  this.props.history.push({
-                    pathname: item.path
-                  });
-                  this.setState({
-                    selectedTab: item.name,
-                  })
-                }}
-              >
-                <Route key={item.id} exact={item.exact} path={item.path} component={item.component} render={item.render} />
-              </TabBar.Item>
-            )
+          {routes.map(item => {
+            return <TabBar.Item title={item.title} key={item.id}
+              icon={<div style={{
+                width: '22px',
+                height: '22px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat'
+              }} />
+              }
+              selected={this.state.selectedTab === item.title}
+              selectedIcon={<div style={{
+                width: '22px',
+                height: '22px',
+                background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat'
+              }}
+              />
+              }
+              onPress={() => {
+                this.setState({
+                  selectedTab: item.title
+                })
+                let { history } = this.props;
+                history.push({ pathname: item.path })
+              }}
+
+            >
+              <Switch>
+                <Route path={item.path} component={item.component} />
+                {/*routes.map(({id,path,component,render,exact})=>(
+                    <Route key = {id} exact = {exact} path = {path} component = {component} render={render}/>
+                    ))*/}
+              </Switch>
+            </TabBar.Item>
           })}
         </TabBar>
       </div>

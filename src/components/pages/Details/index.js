@@ -8,11 +8,12 @@ import Drawer from '../../commons/Drawer'
 class Details extends Component{
   render(){
     return(
-        <div>
-          <AppTitle/>
-          <p>这是详情页</p>
-          <Drawer/>
-        </div>
+      <div>
+        detail
+        {/* <AppTitle/>
+        <p>这是详情页</p>
+        <Drawer/> */}
+      </div>
     )
   }
 }
