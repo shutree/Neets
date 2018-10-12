@@ -11,11 +11,11 @@ class Title extends React.Component{
                 mode="dark"
                 leftContent="Back"
                 rightContent={[
-                  <Icon key="1" type="ellipsis" />,
+                <Icon key="1" type="ellipsis" />,
                 ]}
-              >
+            >
                 <input type="text"/>
-              </NavBar>
+            </NavBar>
             </div>
         )
     }

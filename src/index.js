@@ -4,7 +4,7 @@ import './index.css';
 import 'swiper/dist/css/swiper.min.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { 
+import {
     HashRouter as Router
 } from 'react-router-dom'
 
