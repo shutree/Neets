@@ -17,7 +17,7 @@ class Details extends Component {
   render() {
     return (
       <div className="Details">
-        <Tabs tabs={[{ title: <Badge>我的</Badge> },{ title: <Badge>推荐</Badge> }]}>
+        <Tabs tabs={[{ title: <Badge>我的</Badge> },{ title: <Badge>推荐</Badge> }]} initialPage={1}>
           <CardMine></CardMine>
           <CardRecommend></CardRecommend>
         </Tabs>

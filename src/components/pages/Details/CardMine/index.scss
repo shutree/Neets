@@ -1,4 +1,13 @@
 .CardMine{
   background: gray;
   height: 100%;
+  .card{
+    background: none;
+    .card_body{
+      height: 100px;
+      margin-bottom: 10px;
+      background: white;
+      padding: 0 10px;
+    }
+  }
 }

@@ -1,4 +1,16 @@
 .CardRecommend{
   background: gray;
   height: 100%;
+  .card_body{
+      padding: 10px 5px;
+    .am-grid-item-content{
+      padding: 0;
+      .grid_item{
+        padding: 5px;
+      }
+    }
+  }
+  .division{
+    height: 10px;
+  }
 }
