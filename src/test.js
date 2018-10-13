@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 /* eslint no-dupe-keys: 0, no-mixed-operators: 0 */
 import { PullToRefresh, ListView, Button } from 'antd-mobile';
 
@@ -16,7 +19,7 @@ const data = [
     img: 'https://zos.alipayobjects.com/rmsportal/hfVtzEhPzTUewPm.png',
     title: 'Eat the week',
     des: '不是所有的兼职汪都需要风吹日晒',
-  },
+  }
 ];
 const NUM_ROWS = 20;
 let pageIndex = 0;
@@ -118,7 +121,9 @@ class App extends React.Component {
         }}
       />
     );
+
     let index = data.length - 1;
+
     const row = (rowData, sectionID, rowID) => {
       if (index < 0) {
         index = data.length - 1;
@@ -128,7 +133,7 @@ class App extends React.Component {
         <div key={rowID}
           style={{
             padding: '0 15px',
-            backgroundColor: 'white',
+            backgroundColor: '',
           }}
         >
           <div style={{ height: '50px', lineHeight: '50px', color: '#888', fontSize: '18px', borderBottom: '1px solid #ddd' }}>
@@ -144,39 +149,44 @@ class App extends React.Component {
         </div>
       );
     };
-    return (<div>
-      <Button
-        style={{ margin: '30px 15px' }}
-        inline
-        onClick={() => this.setState({ useBodyScroll: !this.state.useBodyScroll })}
-      >
-        {this.state.useBodyScroll ? 'useBodyScroll' : 'partial scroll'}
-      </Button>
-      <ListView
-        key={this.state.useBodyScroll ? '0' : '1'}
-        ref={el => this.lv = el}
-        dataSource={this.state.dataSource}
-        renderHeader={() => <span>Pull to refresh</span>}
-        renderFooter={() => (<div style={{ padding: 30, textAlign: 'center' }}>
-          {this.state.isLoading ? 'Loading...' : 'Loaded'}
-        </div>)}
-        renderRow={row}
-        renderSeparator={separator}
-        useBodyScroll={this.state.useBodyScroll}
-        style={this.state.useBodyScroll ? {} : {
-          height: this.state.height,
-          border: '1px solid #ddd',
-          margin: '5px 0',
-        }}
-        pullToRefresh={<PullToRefresh
-          refreshing={this.state.refreshing}
-          onRefresh={this.onRefresh}
-        />}
-        onEndReached={this.onEndReached}
-        pageSize={5}
-      />
-    </div>);
+
+    return (
+      <div>
+        <Button
+          style={{ margin: '30px 15px' }}
+          inline
+          onClick={() => this.setState({ useBodyScroll: !this.state.useBodyScroll })}
+        >
+          {this.state.useBodyScroll ? 'useBodyScroll' : 'partial scroll'}
+        </Button>
+        <ListView
+          key={this.state.useBodyScroll ? '0' : '1'}
+          ref={el => this.lv = el}
+          dataSource={this.state.dataSource}
+          renderHeader={() => <span>Pull to refresh</span>}
+          renderFooter={() => (<div style={{ padding: 30, textAlign: 'center' }}>
+            {this.state.isLoading ? 'Loading...' : 'Loaded'}
+          </div>)}
+          renderRow={row}
+          renderSeparator={separator}
+          useBodyScroll={this.state.useBodyScroll}
+          style={this.state.useBodyScroll ? {} : {
+            height: this.state.height,
+            border: '1px solid #ddd',
+            margin: '5px 0',
+          }}
+          // pullToRefresh={<PullToRefresh
+          //   refreshing={this.state.refreshing}
+          //   onRefresh={this.onRefresh}
+          // />}
+          onEndReached={this.onEndReached}
+          pageSize={5}
+        />
+      </div>
+    );
   }
 }
 
-ReactDOM.render(<App />, mountNode);
+export default App;
+
+// ReactDOM.render(<App />, mountNode);
