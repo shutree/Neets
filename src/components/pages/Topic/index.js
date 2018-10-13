@@ -9,12 +9,11 @@ import { WhiteSpace } from 'antd-mobile';
 class Topic extends Component{
   render(){
     return(
-        <div>
-          <AppTitle/>
-          <Swiper/>
-          <WhiteSpace/>
-          
-        </div>
+      <div>
+        <AppTitle/>
+        <Swiper/>
+        <WhiteSpace/>
+      </div>
     )
   }
 }

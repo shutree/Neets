@@ -7,6 +7,7 @@ class Swiper extends Component{
         data: [],
         imgHeight: 50,
       }
+      
     componentDidMount() {
         // simulate img loading
         
