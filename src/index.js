@@ -5,17 +5,18 @@ import 'swiper/dist/css/swiper.min.css'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {
-    HashRouter as Router
+    HashRouter as Router,Route, Switch, Redirect, withRouter 
 } from 'react-router-dom'
+
 
 import Title from './components/commons/title'
 
-import Test from './test'
+import Test from './test';
+import AppLogin from './components/pages/log/log';
+import AppSearch from './components/commons/Search';
+import AppCate from './components/pages/Category/videoDetail/videoDel';
 
 
-// ReactDOM.render(
-//     <Test></Test>,
-//     document.getElementById('root'));
 ReactDOM.render(
     <Router>
         <App />

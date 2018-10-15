@@ -7,14 +7,22 @@ import '../../assets/css/common.css'
 
 class Title extends React.Component{
   state = {
-    open: true,
+    open: false,
+    toggle:'none'
   }
   onOpenChange = (...args) => {
     console.log(args);
-    this.setState({ open: !this.state.open });
-    let dr = document.querySelector('.my-drawer');
-    dr.style.display = 'block';
-
+    this.setState({ open: !this.state.open,
+      toggle:''
+     });
+  }
+  componentWillUpdate(){
+    console.log(this.state.open)
+    if(this.state.open){
+      this.setState({
+      toggle:"none"
+     });
+    }
   }
 
   render(){
@@ -51,14 +59,14 @@ class Title extends React.Component{
         </NavBar>
         <Drawer
           className="my-drawer"
-          style={{ minHeight: document.documentElement.clientHeight }}
+          style={{ minHeight: document.documentElement.clientHeight, display:this.state.toggle}}
           enableDragHandle
           contentStyle={{ color: '#A6A6A6', textAlign: 'center', paddingTop: 42 }}
           sidebar={sidebar}
           open={this.state.open}
           onOpenChange={this.onOpenChange}
         >
-        {this.state.open?'':'neets'}
+        {this.state.open?'neets':''}
         </Drawer>
       </div>
     )

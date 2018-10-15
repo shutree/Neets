@@ -1,9 +1,10 @@
-
+.title{
+    position:relative;
+}
 .my-drawer{
     position:absolute;
     top:45px;
     left:0;
-    display: none;
     z-index:800;
 }
 
