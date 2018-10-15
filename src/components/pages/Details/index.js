@@ -12,14 +12,27 @@ import './index.scss';
 
 import { Tabs, Badge, WhiteSpace } from 'antd-mobile';
 
+let renderTabBar = (props) => {
+  let goto = props.goToTab;
+  let activeTab = props.activeTab;
+  return (
+    <div className="tabBar_wrapper">
+      <span className={activeTab === 0 ? 'mine activeTab' : 'mine' } onClick={goto.bind(this, 0)} style={{}}>我的</span>
+      <span className="division">|</span>
+      <span className={activeTab === 1 ? 'recommend activeTab' : 'recommend' } onClick={goto.bind(this, 1)}>推荐</span>
+    </div>
+  )
+}
+
 
 class Details extends Component {
   render() {
     return (
       <div className="Details">
-
-        <WhiteSpace/>
-        <Tabs tabs={[{ title: <Badge>我的</Badge> },{ title: <Badge>推荐</Badge> }]} initialPage={1}>
+        <Tabs
+          tabs={[{}, {}]}
+          renderTabBar={renderTabBar}
+        >
           <CardMine></CardMine>
           <CardRecommend></CardRecommend>
         </Tabs>

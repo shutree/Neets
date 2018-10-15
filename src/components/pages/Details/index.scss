@@ -1,4 +1,18 @@
 .Details{
   background: gray;
   height: 100%;
+  .tabBar_wrapper{
+    background: yellow;
+    color: rgb(170, 167, 126);
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+    .activeTab{
+      font-weight: bold;
+      color: black;
+    }
+    .division{
+      padding: 0 20px;
+    }
+  }
 }
