@@ -32,15 +32,14 @@ class CardMine extends React.Component {
   render() {
     return (
       <div className="CardMine">
-        <Card full>
-          {
-            this.state.cards.map((card, index) => {
-              return  <Card.Body key={index}>
-                            <h4>追剧清单</h4>
-                            暂无
-                      </Card.Body>
-            })
-          }
+        <Card full className="card">
+          {this.state.cards.map((card, index) => {
+            return (
+              <Card.Body key={index} className="card_body">
+                <h4>{card.title}</h4>
+                暂无
+              </Card.Body>
+          )})}
 
         </Card>
       </div>

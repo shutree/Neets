@@ -14,8 +14,7 @@ import { NavBar, Icon, TabBar } from 'antd-mobile';
 import axios from 'axios';
 
 
-import './assets/css/common.css'
-
+import './assets/css/common.css';
 
 class App extends Component {
   constructor(props) {

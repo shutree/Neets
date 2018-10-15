@@ -10,7 +10,12 @@ import {
 
 import Title from './components/commons/title'
 
+import Test from './test'
 
+
+// ReactDOM.render(
+//     <Test></Test>,
+//     document.getElementById('root'));
 ReactDOM.render(
     <Router>
         <App />

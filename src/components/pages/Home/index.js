@@ -45,7 +45,7 @@ class Home extends Component {
     return (
       <div className="App">
         <AppTitle />
-        <WhiteSpace size="lg" />
+        <WhiteSpace size="xl" />
         <Swiper />
         <div className='hList'>
           {this.state.data.map((item, idx) => {

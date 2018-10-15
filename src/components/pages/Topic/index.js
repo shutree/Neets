@@ -11,6 +11,8 @@ class Topic extends Component{
     return(
       <div>
         <AppTitle/>
+        <WhiteSpace size="xl" />
+        <WhiteSpace size="xl" />
         <Swiper/>
         <WhiteSpace/>
       </div>
