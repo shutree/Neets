@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavBar, Icon } from 'antd-mobile';
-import Search from './Search'
+import Search from './Search';
+import '../../assets/css/common.css'
 
 class Title extends React.Component{
     render(){
         return (
-            <div>
+            <div className="title">
                 <NavBar
                 style={{background:"yellow"}}
                 mode="dark"

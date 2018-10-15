@@ -31,7 +31,8 @@ class App1 extends React.Component {
       })}
     </List>);
 
-    return (<div style={{ height: '100%' }}>
+    return (
+    <div className="app1" style={{ height: '100%' }}>
       <NavBar icon={<Icon type="ellipsis" />} onLeftClick={this.onOpenChange}>Basic</NavBar>
       <Drawer
         className="my-drawer"

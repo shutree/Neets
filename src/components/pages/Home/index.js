@@ -44,8 +44,7 @@ class Home extends Component {
     let items = this.state.data
     return (
       <div className="App">
-        home
-        {/* <AppTitle />
+        <AppTitle />
         <WhiteSpace size="lg" />
         <Swiper />
         <div className='hList'>
@@ -69,7 +68,7 @@ class Home extends Component {
               </ul>
             </div>
           })}
-        </div> */}
+        </div>
       </div>
     )
   }

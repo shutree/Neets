@@ -35,7 +35,7 @@ class CardMine extends React.Component {
         <Card full>
           {
             this.state.cards.map((card, index) => {
-              return  <Card.Body>
+              return  <Card.Body key={index}>
                             <h4>追剧清单</h4>
                             暂无
                       </Card.Body>

@@ -13,11 +13,9 @@ import { NavBar, Icon, TabBar } from 'antd-mobile';
 
 import axios from 'axios';
 
-<<<<<<< HEAD
+
 import './assets/css/common.css'
-=======
-import './assets/css/common.css';
->>>>>>> 703d9d164dcab56135f0bd62c27bcf8483ea5039
+
 
 class App extends Component {
   constructor(props) {
@@ -27,6 +25,10 @@ class App extends Component {
       hidden: false,
       fullScreen: false,
     };
+  }
+
+  componentWillMount(){
+    return <div>Loading....</div>
   }
 
   render() {

@@ -36,17 +36,17 @@ class Log extends Component{
       }
     render(){
         return (
-            <div>
+            <div className="login">
                 <span>取消</span>
                 <p>请输入手机号</p>
-                <from action="#">
+                <div>
                     <input type="tel" placeholder="请输入手机号" />
                     <button>下一步</button>
-                </from>
+                </div>
                 <div>
                     <WingBlank>
                         <WhiteSpace/>
-                        <Button onClick={this.showShareActionSheetMulpitleLine}>showShareActionSheetMulpitleLine</Button>
+                        <Button onClick={this.showShareActionSheetMulpitleLine}>其他登录方式</Button>
                     </WingBlank>
                 </div>
             </div>
