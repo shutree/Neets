@@ -1,0 +1,31 @@
+.login{
+	font-size: 20px;
+	padding:20px;
+	.cancel{
+		
+		display: block;
+		color:blue;
+		
+		
+	}
+	p.tel-txt{
+		text-align: center;
+		margin:100px 0 40px;
+	}
+	.input{
+		margin:0 auto;
+		padding-left:16px;
+		width:385px;
+		input{
+			padding-left:10px;
+			border:2px solid #ccc;
+			height: 40px;
+			width:208px;
+		}
+		input[type="button"]{
+			border:none;
+			height:44px;
+			width:80px;
+		}
+	}
+}

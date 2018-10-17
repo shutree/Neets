@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
 import axios from 'axios';
 import '../inedx.scss';
@@ -24,14 +25,20 @@ class Subscribe extends Component{
             console.log(this.state.data)
         })
     }
-
+	
+	go(path){
+		let {history} = this.props;
+		history.push({
+			pathname:path
+		})
+	}
     render(){
         return (
             <div className="Subscribe">
                 <List>
                 {this.state.data.map(item=>{
                         let photo = JSON.parse(item.photos)
-                        return (<Item key={item.id} align="top" multipleLine >
+                        return (<Item key={item.id} align="top" multipleLine onClick={this.go.bind(this,'/video')} >
                             <div className="front-img">
                                 <img src={photo.large} style={{width:100,heigh:100}}/>
                             </div>
@@ -51,5 +58,5 @@ class Subscribe extends Component{
         )
     }
 }
-
+Subscribe = withRouter(Subscribe);
 export default Subscribe;

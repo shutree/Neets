@@ -69,6 +69,8 @@ class Home extends Component {
             </div>
           })}
         </div>
+				<WhiteSpace size="xl" />
+        <AppNav/>
       </div>
     )
   }

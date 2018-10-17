@@ -1,5 +1,6 @@
 import React from 'react';
-import Search from './Search';
+import {withRouter} from 'react-router-dom';
+
 import { Drawer, List,NavBar, Icon, Card, WingBlank, WhiteSpace } from 'antd-mobile';
 
 import '../../assets/css/drawer.css'
@@ -11,18 +12,20 @@ class Title extends React.Component{
     toggle:'none'
   }
   onOpenChange = (...args) => {
-    console.log(args);
     this.setState({ open: !this.state.open,
       toggle:''
      });
   }
   componentWillUpdate(){
-    console.log(this.state.open)
     if(this.state.open){
       this.setState({
       toggle:"none"
      });
     }
+  }
+  go(path){
+    let {history} = this.props;
+    history.push({pathname:path})
   }
 
   render(){
@@ -55,7 +58,7 @@ class Title extends React.Component{
             ]}
             onLeftClick={this.onOpenChange}
         >
-        <input type="text"/>
+        <input type="text" onBlur={this.go.bind(this,'/search')}/>
         </NavBar>
         <Drawer
           className="my-drawer"
@@ -72,7 +75,7 @@ class Title extends React.Component{
     )
   }
 }
-
+Title = withRouter(Title);
 export default Title;
 
 

@@ -36,6 +36,7 @@ class Details extends Component {
           <CardMine></CardMine>
           <CardRecommend></CardRecommend>
         </Tabs>
+        <AppNav/>
       </div>
     )
   }

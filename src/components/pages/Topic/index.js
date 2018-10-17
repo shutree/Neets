@@ -15,6 +15,7 @@ class Topic extends Component{
         <WhiteSpace size="xl" />
         <Swiper/>
         <WhiteSpace/>
+        <AppNav/>
       </div>
     )
   }

@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
 import { ActionSheet, WingBlank, WhiteSpace, Button, Toast } from 'antd-mobile';
+import './log.scss';
 const isIPhone = new RegExp('\\biPhone\\b|\\biPod\\b', 'i').test(window.navigator.userAgent);
 let wrapProps;
 if (isIPhone) {
@@ -34,14 +36,19 @@ class Log extends Component{
           this.setState({ clicked2: buttonIndex > -1 ? data[rowIndex][buttonIndex].title : 'cancel' });
         });
       }
+		logCancel(path){
+			console.log(88)
+			let {history} = this.props;
+			history.push({pathname:path})
+		}
     render(){
         return (
             <div className="login">
-                <span>取消</span>
-                <p>请输入手机号</p>
-                <div>
+                <span className="cancel" onClick={this.logCancel.bind(this,'/mine')}>取消</span>
+                <p className="tel-txt">请输入手机号</p>
+                <div className="input">
                     <input type="tel" placeholder="请输入手机号" />
-                    <button>下一步</button>
+                    <input type="button" value="下一步" />
                 </div>
                 <div>
                     <WingBlank>
@@ -53,5 +60,5 @@ class Log extends Component{
         )
     }
 }
-
+Log = withRouter(Log);
 export default Log;

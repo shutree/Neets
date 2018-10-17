@@ -33,7 +33,7 @@ class Mine extends Component {
 					<Item thumb="https://zos.alipayobjects.com/rmsportal/UmbJMbWOejVOpxe.png" arrow="horizontal">关于</Item>
 					<Item thumb="https://zos.alipayobjects.com/rmsportal/UmbJMbWOejVOpxe.png" arrow="horizontal">免责声明</Item>
 				</List>
-				<Route path={this.props.match.path + '/:login'} component={AppLog}/>
+				<AppNav/>
 			</div>
 		)
 	}

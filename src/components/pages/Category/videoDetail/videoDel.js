@@ -48,11 +48,11 @@ class VideoDel extends Component{
                             <img src='' style={{width:100,heigh:100}}/>
                         </div>
                         <div className="video-content">
-                            <p>{item.title} <span>{item.rating}</span> <span>订阅</span></p>
-                            <span>{item.hot}</span>
-                            <p><span>{item.countries}</span>/<span>{item.mainlandPubdate}</span></p>
-                            <p><span>更新至{item.currentSeries}</span>/<span>共{item.episodesCount}</span></p>
-                            <p>{item.refreshDesc}</p>
+                            <p>机器人少女 <span>2018-08-18</span> <span>订阅</span></p>
+                            <span>热度</span>
+                            <p><span>日本</span>/<span>动漫</span></p>
+                            <p><span>更新至3</span>/<span>共12</span></p>
+                            <p>已完结</p>
                         </div>
                     </Item>
                 </List>

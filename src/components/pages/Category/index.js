@@ -22,6 +22,7 @@ class Category extends Component{
           <WhiteSpace size="xl" />
           <AllCategory/>
           <Subscribe/>
+          <AppNav/>
         </div>
     )
   }
