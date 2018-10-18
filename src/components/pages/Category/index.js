@@ -16,7 +16,7 @@ const Brief = Item.Brief;
 class Category extends Component{
   render(){
     return(
-        <div className="App">
+        <div className="category">
           <Title/>
           <WhiteSpace size="xl" />
           <WhiteSpace size="xl" />

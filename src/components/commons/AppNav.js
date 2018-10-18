@@ -18,9 +18,6 @@ class AppNav extends Component {
 		
 		
   }
-
-
-
   render() {
     let { routes } = this.props
 		console.log(this.state.selectedTab)

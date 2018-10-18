@@ -43,7 +43,7 @@ class Home extends Component {
   render() {
     let items = this.state.data
     return (
-      <div className="App">
+      <div className="home">
         <AppTitle />
         <WhiteSpace size="xl" />
         <Swiper />
@@ -51,11 +51,13 @@ class Home extends Component {
           {this.state.data.map((item, idx) => {
             return <div className="homelist" key={idx}>
               <div className="txt">
-                <div><i></i><span>{item.title}</span>
+                <div className="title">
+                  <h4><i></i><strong >{item.title}</strong></h4>
+                  <p>{item.seriesCount}条类容</p>
                 </div>
-                <span>收藏</span>
+                <span className="collect">收藏</span>
               </div>
-              <p>{item.seriesCount}</p>
+              
               <ul>
                 {item.seriesVos.map((list, idx) => {
                   return <li key={idx}>

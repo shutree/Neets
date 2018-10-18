@@ -1,0 +1,52 @@
+.category{
+    .allCategories{
+        span{
+            display:inline-block;
+            margin:10px 21px;
+            font-size:12px;
+        }
+        span:nth-child(1){
+            color:yellow;
+        }
+
+    }
+    .Subscribe{
+
+        .front-img{
+            float:left;
+            img{
+                height:120px;
+            }
+        }
+        .video-content{
+            overflow:hidden;
+            padding-left:20px;
+            p{
+                font-size:12px;
+            }
+            .rate{
+                display:inline-block;
+                color:orange;
+                margin-left:5px;
+            }
+            .subs{
+                display:inline-block;
+                float:right;
+                font-size:18px;
+                text-align:center;
+                width:60px;
+                border:1px solid #ddd;
+                color:rgb(51, 163, 244);
+            }
+            .hot{
+                font-size:12px;
+                
+            }
+            span{
+                color:#ccc;
+                font-size:12px;
+            }
+        }
+    }
+    
+}  

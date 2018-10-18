@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
 import axios from 'axios';
-import '../inedx.scss';
+import '../index.scss';
 import { List } from 'antd-mobile';
 
 
@@ -43,16 +43,15 @@ class Subscribe extends Component{
                                 <img src={photo.large} style={{width:100,heigh:100}}/>
                             </div>
                             <div className="video-content">
-                                <p>{item.title} <span>{item.rating}</span> <span>订阅</span></p>
-                                <span>{item.hot}</span>
-                                <p><span>{item.countries}</span>/<span>{item.mainlandPubdate}</span></p>
-                                <p><span>更新至{item.currentSeries}</span>/<span>共{item.episodesCount}</span></p>
-                                <p>{item.refreshDesc}</p>
+                                <p>{item.title} <span className="rate">{item.rating}</span> <span className="subs">订阅</span></p>
+                                <span className="hot">{item.hot}</span>
+                                <p><span>{item.countries}/</span><span>{item.mainlandPubdate}</span></p>
+                                <p><span>更新至{item.currentSeries}/</span><span>共{item.episodesCount}</span></p>
+                                <span>{item.refreshDesc}</span>
                             </div>
                             </Item>
                             )
                     })}
-                    
                 </List>
             </div>
         )

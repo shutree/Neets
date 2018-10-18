@@ -4,7 +4,7 @@ import React,{Component} from 'react';
 import { List, InputItem, Switch, Stepper, Range, Button } from 'antd-mobile';
 
 import axios from 'axios';
-import '../inedx.scss';
+import '../index.scss';
 const Item = List.Item;
 const Brief = Item.Brief;
 

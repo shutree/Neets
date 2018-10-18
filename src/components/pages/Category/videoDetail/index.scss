@@ -1,0 +1,28 @@
+.videodel{
+    .front-img{
+        
+        float:left;
+        img{
+            height:180px;
+            width:150px;
+        }
+    }
+    .video-content{
+        padding-right:70px;
+        float:right;
+        overflow:hidden;
+        font-size:14px;
+        .itr{
+            font-size:20px;
+        }
+    }
+    .introduction{
+        h4{
+            font-size:20px;
+            margin:10px;
+        }
+        p{
+            padding:10px;
+        }
+    }
+}
